@@ -430,13 +430,19 @@ body {
 
 .hero {
   text-align: center;
-  color: white; 
-  padding-block-start: calc(60px + var(--section-padding));
-  padding-block-end: var(--section-padding);
+  color: white;
+  padding-block-start: calc(30px + var(--section-padding)); /* Adjust the value as needed */
+  padding-block-end: calc(30px + var(--section-padding)); /* Adjust the value as needed */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
+
 
 .hero .container {
   display: grid;
