@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StudentBae - What we learn with pleasure, we never forget</title>
+  <title>StudentBae: The Ultimate AI Platform for Students</title>
 
   <!-- 
     - favicon
@@ -27,7 +27,9 @@
   <!-- 
     - preload images
   -->
-  <link rel="preload" as="image" href="./assets/images/hero-bg.png">
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+  <link rel="preload" as="image" href="./assets/images/hero-abs-1.png" media="min-width(768px)">
+  <link rel="preload" as="image" href="./assets/images/hero-abs-2.png" media="min-width(768px)">
 
 </head>
 
@@ -61,11 +63,11 @@
           </li>
 
           <li class="navbar-item">
-            <a href="#about" class="navbar-link" data-nav-toggler>About</a>
+            <a href="#category" class="navbar-link" data-nav-toggler>Features</a>
           </li>
 
           <li class="navbar-item">
-            <a href="#courses" class="navbar-link" data-nav-toggler>Courses</a>
+            <a href="#about" class="navbar-link" data-nav-toggler>About</a>
           </li>
 
           <li class="navbar-item">
@@ -73,7 +75,7 @@
           </li>
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link" data-nav-toggler>Blog</a>
+            <a href="#workshop" class="navbar-link" data-nav-toggler>Workshop</a>
           </li>
 
           <li class="navbar-item">
@@ -144,21 +146,21 @@
         - #HERO
       -->
 
-      <section class="hero" id="home" aria-label="hero" style="background-image: url('./assets/images/hero-bg.png')">
+      <section class="hero" id="home" aria-label="hero" style="background-image: url('./assets/images/hero-bg.jpg')">
         <div class="container">
 
           <div class="hero-content">
 
-            <p class="section-subtitle">Better Learning Future With Us</p>
+            <p class="section-subtitle">StudentBae The Ultimate AI Platform for Students</p>
 
-            <h2 class="h1 hero-title">Education Is About Academic Excellence</h2>
+            <h2 class="h1 hero-title">Learn Anything Faster and Easier with StudentBae</h2>
 
             <p class="hero-text">
-              Sed eu volutpat arcu, a tincidunt nulla quam, feugiat sit amet ipsum a, dapibus porta velit.
+              StudentBae is a smart platform that connects you with the best AI tools and resources for your studies. Find, learn, and ace anything with StudentBae
             </p>
 
             <a href="#" class="btn btn-primary">
-              <span class="span">Get Started Today</span>
+              <span class="span">Try Now</span>
 
               <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
             </a>
@@ -167,6 +169,14 @@
 
           <figure class="hero-banner">
 
+            <img src="./assets/images/hero-banner.png" width="500" height="500" loading="lazy" alt="hero image"
+              class="w-100">
+
+            <img src="./assets/images/hero-abs-1.png" width="318" height="352" loading="lazy" aria-hidden="true"
+              class="abs-img abs-img-1">
+
+            <img src="./assets/images/hero-abs-2.png" width="160" height="160" loading="lazy" aria-hidden="true"
+              class="abs-img abs-img-2">
 
           </figure>
 
@@ -177,185 +187,128 @@
 
 
 
-      <!-- 
-        - #CATEGORY
-      -->
-
-      <section class="section category" aria-label="category">
+      <section class="section category" aria-label="category" id="category" >
         <div class="container">
-
-          <p class="section-subtitle">Course Categories</p>
-
-          <h2 class="h2 section-title">Popular Topics To Learn</h2>
-
+      
+          <p class="section-subtitle">StudentBae Features</p>
+      
+          <h2 class="h2 section-title">What We Offer</h2>
+      
           <ul class="grid-list">
-
+      
             <li>
               <div class="category-card">
-
+      
                 <div class="card-icon">
-                  <ion-icon name="briefcase-outline"></ion-icon>
+                  <ion-icon name="document-text-outline"></ion-icon>
                 </div>
-
+      
                 <div>
                   <h3 class="h3 card-title">
-                    <a href="#">Personal Development</a>
+                    <a href="#">Study Materials</a>
                   </h3>
-
-                  <span class="card-meta">39 Course</span>
+      
+                  <span class="card-meta">Access to a vast collection of study materials including PDFs, question papers, PPTs, and research papers.</span>
                 </div>
-
+      
               </div>
             </li>
-
+      
             <li>
               <div class="category-card">
-
+      
                 <div class="card-icon">
-                  <ion-icon name="file-tray-full-outline"></ion-icon>
+                  <ion-icon name="chatbox-ellipses-outline"></ion-icon>
                 </div>
-
+      
                 <div>
                   <h3 class="h3 card-title">
-                    <a href="#">Human Research</a>
+                    <a href="#">StudentGPT</a>
                   </h3>
-
-                  <span class="card-meta">24 Course</span>
+      
+                  <span class="card-meta">You can upload an image of the question and it will give you the detailed answer, You can also chat with it like your teacher.</span>
                 </div>
-
+      
               </div>
             </li>
-
+      
             <li>
               <div class="category-card">
-
+      
                 <div class="card-icon">
-                  <ion-icon name="color-palette-outline"></ion-icon>
+                  <ion-icon name="school-outline"></ion-icon>
                 </div>
-
+      
                 <div>
                   <h3 class="h3 card-title">
-                    <a href="#">Art & Design</a>
+                    <a href="#">TutorAI</a>
                   </h3>
-
-                  <span class="card-meta">39 Course</span>
+      
+                  <span class="card-meta">Explains all the concepts in detail with the help of study materials including videos, PPTs, PDFs, and question papers.</span>
                 </div>
-
+      
               </div>
             </li>
-
+      
             <li>
               <div class="category-card">
-
+      
                 <div class="card-icon">
-                  <ion-icon name="layers-outline"></ion-icon>
+                  <ion-icon name="person-outline"></ion-icon>
                 </div>
-
+      
                 <div>
                   <h3 class="h3 card-title">
-                    <a href="#">Business Management</a>
+                    <a href="#">InviewAI</a>
                   </h3>
-
-                  <span class="card-meta">39 Course</span>
+      
+                  <span class="card-meta">Helps you prepare for interviews by providing interview questions, points to add in your resume, and suggesting some project ideas.</span>
                 </div>
-
+      
               </div>
             </li>
-
+      
             <li>
               <div class="category-card">
-
+      
                 <div class="card-icon">
-                  <ion-icon name="laptop-outline"></ion-icon>
+                  <ion-icon name="search-outline"></ion-icon>
                 </div>
-
+      
                 <div>
                   <h3 class="h3 card-title">
-                    <a href="#">Web Development</a>
+                    <a href="#">DetectiveAI</a>
                   </h3>
-
-                  <span class="card-meta">39 Course</span>
+      
+                  <span class="card-meta">An AI that searches for your username on the internet and gives back the results.</span>
                 </div>
-
+      
               </div>
             </li>
-
+      
             <li>
               <div class="category-card">
-
+      
                 <div class="card-icon">
-                  <ion-icon name="thumbs-up-outline"></ion-icon>
+                  <ion-icon name="cloud-upload-outline"></ion-icon>
                 </div>
-
+      
                 <div>
                   <h3 class="h3 card-title">
-                    <a href="#">Lifestyle</a>
+                    <a href="#">Upload Your Own PDFs</a>
                   </h3>
-
-                  <span class="card-meta">39 Course</span>
+      
+                  <span class="card-meta">You can upload your own PDFs and ask questions about them.</span>
                 </div>
-
+      
               </div>
             </li>
-
-            <li>
-              <div class="category-card">
-
-                <div class="card-icon">
-                  <ion-icon name="headset-outline"></ion-icon>
-                </div>
-
-                <div>
-                  <h3 class="h3 card-title">
-                    <a href="#">Digital Marketing</a>
-                  </h3>
-
-                  <span class="card-meta">39 Course</span>
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="category-card">
-
-                <div class="card-icon">
-                  <ion-icon name="server-outline"></ion-icon>
-                </div>
-
-                <div>
-                  <h3 class="h3 card-title">
-                    <a href="#">Data Sciences</a>
-                  </h3>
-
-                  <span class="card-meta">39 Course</span>
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="category-card">
-
-                <div class="card-icon">
-                  <ion-icon name="medkit-outline"></ion-icon>
-                </div>
-
-                <div>
-                  <h3 class="h3 card-title">
-                    <a href="#">Health & Fitness</a>
-                  </h3>
-
-                  <span class="card-meta">39 Course</span>
-                </div>
-
-              </div>
-            </li>
-
+      
           </ul>
-
+      
         </div>
       </section>
+      
 
 
 
@@ -385,7 +338,7 @@
 
             <p class="section-subtitle">Who We Are</p>
 
-            <h2 class="h2 section-title">We Offer The Best Carrier</h2>
+            <h2 class="h2 section-title">Technolegies we used</h2>
 
             <ul class="about-list">
 
@@ -396,11 +349,10 @@
                 </div>
 
                 <div>
-                  <h3 class="h3 item-title">Industry Expert Instructor</h3>
+                  <h3 class="h3 item-title">StudentBae is powered by cutting-edge technologies</h3>
 
                   <p class="item-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmoded tempor incididunt dolore magna
-                    aliqua.
+                    StudentBae is powered by cutting-edge technologies such as GEN AI, Langchain, and OpenCV. We use the Palm2 model to provide accurate answers to your questions.
                   </p>
                 </div>
 
@@ -413,11 +365,10 @@
                 </div>
 
                 <div>
-                  <h3 class="h3 item-title">Up-to-Date Course Content</h3>
+                  <h3 class="h3 item-title">Support & Updates</h3>
 
                   <p class="item-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmoded tempor incididunt dolore magna
-                    aliqua.
+                    At StudentBae, we are dedicated to providing the best resources for O Level and A Level subjects. We are constantly working on identifying the problems that students face and providing solutions to them. Our team is always adding new features to the website
                   </p>
                 </div>
 
@@ -430,11 +381,10 @@
                 </div>
 
                 <div>
-                  <h3 class="h3 item-title">Biggest Student Community</h3>
+                  <h3 class="h3 item-title">Join the StudentBae Community</h3>
 
                   <p class="item-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmoded tempor incididunt dolore magna
-                    aliqua.
+                    We invite students like you to join us in developing and coding solutions to fix issues faced by students. Our community is open to all Developers, We believe that by working together, we can create a positive impact on the student community.
                   </p>
                 </div>
 
@@ -443,7 +393,7 @@
             </ul>
 
             <a href="#" class="btn btn-primary">
-              <span class="span">Know About Us</span>
+              <span class="span">Contribute</span>
 
               <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
             </a>
@@ -456,10 +406,10 @@
 
 
 
-
+ 
       <!-- 
         - #COURSE
-      -->
+      
 
       <section class="section course" id="courses" aria-label="course"
         style="background-image: url('./assets/images/course-bg.jpg')">
@@ -929,7 +879,7 @@
 
         </div>
       </section>
-
+ -->
 
 
 
@@ -938,11 +888,11 @@
         - #CTA
       -->
 
-      <section class="section cta" aria-label="workshop" style="background-image: url('./assets/images/cta-bg.png')">
+      <section class="section cta" id = "workshop" aria-label="workshop" style="background-image: url('./assets/images/cta-bg.png')">
         <div class="container">
 
           <figure class="cta-banner">
-            <img src="./assets/images/cta-banner.jpg" width="580" height="380" loading="lazy" alt="cta banner"
+            <img src="./assets/images/dw.jpg" width="580" height="380" loading="lazy" alt="cta banner"
               class="img-cover">
           </figure>
 
@@ -953,9 +903,9 @@
             <h2 class="h2 section-title">Join Our Free Workshops</h2>
 
             <p class="section-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit amet, consect adipi scing elit, sed do
-              eiusmod tempor
-              incididunt ut sed do eiusmod tempor incididunt ut labore et dolore aliqua.
+              We conduct free online workshops every month on Ethical Hacking, Python, Linux, Big Data, and Cloud Computing.
+              Join over 1500+ students who have already registered for our workshops. Don't miss this opportunity to enhance your skills
+              and advance your career. Register now for our upcoming workshop!
             </p>
 
             <a href="#" class="btn btn-secondary">
@@ -990,26 +940,26 @@
               <div class="event-card">
 
                 <figure class="card-banner">
-                  <img src="./assets/images/event-1.jpg" width="370" height="250" loading="lazy"
+                  <img src="./assets/images/Instagram.png" width="370" height="250" loading="lazy"
                     alt="Innovation & Technological Entrepreneurship Team" class="img-cover">
                 </figure>
 
-                <time class="badge" datetime="2022-12-04">04 Dec 2022</time>
+                <time class="badge" datetime="2022-12-04">Social Media</time>
 
                 <div class="card-content">
 
                   <address class="card-address">
-                    <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+                    <ion-icon name="videocam-outline" aria-hidden="true"></ion-icon>
 
-                    <span class="span">Alpaca Way Anaheim, CA 92805</span>
+                    <span class="span">Informative contents</span>
                   </address>
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">Innovation & Technological Entrepreneurship Team</a>
+                    <a href="#" class="card-title">Join our vibrant community of over 100,000 Followers</a>
                   </h3>
 
                   <a href="#" class="btn-link">
-                    <span class="span">Get Ticket</span>
+                    <span class="span">Join Now</span>
 
                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                   </a>
@@ -1023,26 +973,26 @@
               <div class="event-card">
 
                 <figure class="card-banner">
-                  <img src="./assets/images/event-2.jpg" width="370" height="250" loading="lazy"
+                  <img src="./assets/images/youtube.png" width="370" height="250" loading="lazy"
                     alt="Virtual Spring Part-time Jobs Fair for Student" class="img-cover">
                 </figure>
 
-                <time class="badge" datetime="2022-10-30">30th Oct 2022</time>
+                <time class="badge" datetime="2022-10-30">Channel</time>
 
                 <div class="card-content">
 
                   <address class="card-address">
-                    <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+                    <ion-icon name="logo-youtube" aria-hidden="true"></ion-icon>
 
-                    <span class="span">Ritter Avenue Detroit, MI 48226</span>
+                    <span class="span">Free Contents</span>
                   </address>
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">Virtual Spring Part-time Jobs Fair for Student</a>
+                    <a href="#" class="card-title">Don't miss our educational content on YouTube!</a>
                   </h3>
 
                   <a href="#" class="btn-link">
-                    <span class="span">Get Ticket</span>
+                    <span class="span">Subscribe</span>
 
                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                   </a>
@@ -1056,26 +1006,26 @@
               <div class="event-card">
 
                 <figure class="card-banner">
-                  <img src="./assets/images/event-3.jpg" width="370" height="250" loading="lazy"
+                  <img src="./assets/images/telegram.png" width="370" height="250" loading="lazy"
                     alt="Explorations of Regional Chief Executive Network" class="img-cover">
                 </figure>
 
-                <time class="badge" datetime="2022-09-18">18th Sep 2022</time>
+                <time class="badge" datetime="2022-09-18">Group</time>
 
                 <div class="card-content">
 
                   <address class="card-address">
-                    <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+                    <ion-icon name="share-social-outline" aria-hidden="true"></ion-icon>
 
-                    <span class="span">Stout Street York, PA 17401</span>
+                    <span class="span">Valuable resources</span>
                   </address>
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">Explorations of Regional Chief Executive Network</a>
+                    <a href="#" class="card-title"> For additional resources and discussions! </a>
                   </h3>
 
                   <a href="#" class="btn-link">
-                    <span class="span">Get Ticket</span>
+                    <span class="span">Join</span>
 
                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                   </a>
@@ -1144,7 +1094,7 @@
 
         <div class="footer-brand">
 
-          <a href="#" class="logo">EduHome</a>
+          <a href="#" class="logo">StudentBae</a>
 
           <p class="section-text">
             It is a long established fact that a reader will be distracted by the readable content of a page when
@@ -1323,7 +1273,7 @@
           <li class="footer-item">
             <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
 
-            <a href="mailto:contact@eduhome.com" class="footer-link">contact@eduhome.com</a>
+            <a href="mailto:contact@StudentBae.com" class="footer-link">contact@StudentBae.com</a>
           </li>
 
         </ul>
@@ -1332,7 +1282,7 @@
 
       <div class="footer-bottom">
         <p class="copyright">
-          Copyright 2022 EduHome. All Rights Reserved by <a href="#" class="copyright-link">codewithsadee</a>
+          Copyright 2022 StudentBae. All Rights Reserved by <a href="#" class="copyright-link">codewithsadee</a>
         </p>
       </div>
 
