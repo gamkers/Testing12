@@ -74,3 +74,59 @@ for (let i = 0; i < whishlistBtns.length; i++) {
     toggleElem(this);
   });
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const categoryCards = document.querySelectorAll('.category-card');
+
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    function handleScroll() {
+      categoryCards.forEach(function (card) {
+        if (isElementInViewport(card)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    // Initial check on page load
+    handleScroll();
+
+    // Listen for scroll events
+    window.addEventListener('scroll', handleScroll);
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const aboutElements = document.querySelectorAll('.about-banner, .about-img, .about-list, .about-item');
+
+    function handleIntersection(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target); // Stop observing once it's shown
+        }
+      });
+    }
+
+    const observer = new IntersectionObserver(handleIntersection, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5 // Adjust the threshold as needed
+    });
+
+    aboutElements.forEach(element => {
+      observer.observe(element);
+    });
+  });
+
+
+
