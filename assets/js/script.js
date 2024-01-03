@@ -128,16 +128,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-window.addEventListener('load', (event) => {
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyy0305wbFaDoOkoA_gEzI8EewcT-s8FanaD5GVgNrSi4jBPzjH-GGhA4posAn1eGF1/exec';
-    const form = document.forms['submit-to-google-sheet-form'];
-
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => console.log('Success!', response))
-        .catch(error => console.error('Error!', error.message));
-    });
-  });
 
 
