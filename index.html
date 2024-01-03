@@ -1057,20 +1057,15 @@
           <h2 class="h2 section-title">Get Every Latest News</h2>
 
           <form action="" class="newsletter-form" name="submit-to-google-sheet-form">
-
             <div class="input-wrapper">
-              <input type="email" name="email_address" aria-label="email" placeholder="Enter your mail address" required
-                class="email-field">
-
+            <input type="email" name="email_address" aria-label="email" placeholder="Enter your mail address" required
+              class="email-field">
               <ion-icon name="mail-open-outline" aria-hidden="true"></ion-icon>
             </div>
-
-            <button type="submit" class="btn btn-primary">
-              <span class="span">Subscribe</span>
-
+              <button type="submit" class="btn btn-primary">
+                  <span class="span">Subscribe</span>
               <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-            </button>
-
+              </button>
           </form>
 
         </div>
@@ -1315,6 +1310,23 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+  window.addEventListener('load', (event) => {
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyy0305wbFaDoOkoA_gEzI8EewcT-s8FanaD5GVgNrSi4jBPzjH-GGhA4posAn1eGF1/exec';
+    const form = document.forms['submit-to-google-sheet-form'];
+
+    if (form) {
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message));
+      });
+    } else {
+      console.error('Form not found!');
+    }
+  });
+</script>
 
 </body>
 
