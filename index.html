@@ -1311,16 +1311,23 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyy0305wbFaDoOkoA_gEzI8EewcT-s8FanaD5GVgNrSi4jBPzjH-GGhA4posAn1eGF1/exec'
-  const form = document.forms['submit-to-google-sheet']
+  <script>
+  window.addEventListener('load', (event) => {
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyy0305wbFaDoOkoA_gEzI8EewcT-s8FanaD5GVgNrSi4jBPzjH-GGhA4posAn1eGF1/exec';
+    const form = document.forms['submit-to-google-sheet-form'];
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(scriptURL)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  })
+    if (form) {
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message));
+      });
+    } else {
+      console.error('Form not found!');
+    }
+  });
+
 </script>
 
 </body>
